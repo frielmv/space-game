@@ -29,7 +29,7 @@ const StarField = {
 	},
 	clock() {
 		this.show = !Viewport.showMap && !Object.values(Bodies.flatList).some(body => {
-			const pos = body.pos.addedTo(Ship.pos, -1);
+			const pos = body.absolutePos.addedTo(Ship.absolutePos, -1);
 			let radius = body.radius;
 			if(body.atmoAlt)
 				radius += body.atmoAlt;
